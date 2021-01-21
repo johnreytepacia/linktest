@@ -9,6 +9,6 @@ class ProductoController extends Controller
     // show product page
     public function index()
     {
-        return view('products.index');
+        return view('products.products');
     }
 }

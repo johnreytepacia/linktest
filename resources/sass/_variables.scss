@@ -18,3 +18,36 @@
 }
 
 
+
+// fonts
+$mont-regular: 'montserratregular';
+$mont-bold: 'montserratextrabold';
+$open-sans:'Open Sans', sans-serif;
+
+// colors
+$grey: #a4a4a4;
+$darkgrey: #333333;
+$lightgrey: #e5e5e5;
+$white: #ffffff;
+$black: #000000;
+$red: #db4a4a;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  xxl: 1320px
+);
+
+
+%link-bold {
+    font-size: 14px;
+    font-family: $mont-bold;
+    color: $darkgrey;
+    text-transform: uppercase;
+}
+
+$break-table: 1024px;
+$break-medium: 767px;
+$break-small: 420px;
