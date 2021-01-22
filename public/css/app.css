@@ -68,11 +68,6 @@ body header nav .navbar-nav .nav-item {
   margin: 0 25px;
   position: relative;
 }
-@media (max-width: 767px) {
-  body header nav .navbar-nav .nav-item {
-    margin: 10px 0;
-  }
-}
 body header nav .navbar-nav .nav-item .active:after {
   background-color: #333333;
   height: 4px;
@@ -83,14 +78,19 @@ body header nav .navbar-nav .nav-item .active:after {
   left: 0;
   transform: skew(-34deg);
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body header nav .navbar-nav .nav-item .active:after {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body header nav .navbar-nav .nav-item .active {
     color: #db4a4a;
+  }
+}
+@media (max-width: 1024px) {
+  body header nav .navbar-nav .nav-item {
+    margin: 10px 0;
   }
 }
 body header .sub-header {
@@ -173,7 +173,7 @@ body .product-wrapper .product-content .quantity {
   margin: 40px 0;
   width: 55%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body .product-wrapper .product-content .quantity {
     width: 100%;
   }
@@ -208,7 +208,7 @@ body .product-wrapper .product-content .tags ul li {
   border: 1px solid #a4a4a4;
   padding: 15px 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body .product-wrapper .product-content .tags ul li {
     margin-bottom: 12px;
   }
@@ -340,6 +340,18 @@ body .related-products .related-products-list .add-to-cart li a {
 body .related-products .related-products-list .add-to-cart li a:hover {
   background-color: #a4a4a4;
 }
+@media (max-width: 1024px) {
+  body .related-products .related-products-list .add-to-cart li {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  body .related-products .related-products-list .add-to-cart {
+    padding: 20px;
+  }
+}
 body .clickable-icons {
   margin-bottom: 0;
 }
@@ -394,6 +406,12 @@ body footer .main-footer .border-bottom-img {
 }
 body footer .main-footer .logo {
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  body footer .main-footer .logo {
+    display: block;
+    text-align: center;
+  }
 }
 body footer .main-footer .social-media {
   margin-top: 25px;
@@ -470,6 +488,11 @@ body footer .main-footer form button {
   color: #ffffff;
   text-transform: uppercase;
   padding: 10px 25px;
+}
+@media (max-width: 767px) {
+  body footer .main-footer {
+    text-align: center;
+  }
 }
 body footer .sub-footer {
   background-color: #ffffff;

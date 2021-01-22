@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-xl">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}"><img src="/images/logo.png" alt=""></a>
 
