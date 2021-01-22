@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Link Test</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <title>Sporta</title>
 
     {{-- open sans font --}}
     <link rel="preconnect" href="https://fonts.gstatic.com">
