@@ -38,16 +38,39 @@
             </ul>
 
             <ul class="list-inline clickable-icons widgets">
-                <li class="list-inline-item"><a href="{{ url('/') }}"><i class="fas fa-search"></i></a></li>
+                <li class="list-inline-item morphing-btn-wrap">
+                    <a data-fancybox="search" data-src="#search" href="javascript:;">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
                 <li class="list-inline-item"><a href="{{ url('/') }}"><i class="fas fa-heart"></i></a></li>
                 <li class="list-inline-item"><a href="{{ url('/') }}"><i class="fas fa-shopping-cart"></i></a></li>
                 <li class="list-inline-item"><a href="{{ url('/') }}"><i class="fas fa-bars"></i></a></li>
             </ul>
 
+
         </div>
     </div>
 
 </nav>
+<div id="search" class="p-5" style="display: none; max-width: 600px;">
+    <h2>
+        Search Me!
+    </h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque
+        sed, lacinia in.
+    </p>
+    <form>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                    class="fas fa-search"></i></button>
+        </div>
+    </form>
+
+</div>
 <div class="container-fluid">
     <div class="divider"></div>
 </div>

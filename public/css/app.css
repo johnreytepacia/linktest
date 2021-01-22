@@ -93,6 +93,13 @@ body header nav .navbar-nav .nav-item .active:after {
     margin: 10px 0;
   }
 }
+body header #search form input {
+  border-radius: 0 !important;
+  padding: 15px 0 !important;
+}
+body header #search form button {
+  background-color: #db4a4a;
+}
 body header .sub-header {
   padding: 80px 0;
 }

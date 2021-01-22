@@ -17,6 +17,9 @@
     {{-- animate css --}}
     <link rel="stylesheet" href="/css/animate.css">
 
+    {{-- fancybox css --}}
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
     {{-- app css --}}
     <link rel="stylesheet" href="/css/app.css">
 
@@ -43,6 +46,7 @@
     <script src="https://kit.fontawesome.com/34eb385340.js" crossorigin="anonymous"></script>
     <script src="/js/core/jquery.min.js"></script>
     <script src="/js/plugins/bootstrap.min.js"></script>
+    <script src="/js/plugins/jquery.fancybox.min.js"></script>
 
     <script src="/js/app.js"></script>
 
