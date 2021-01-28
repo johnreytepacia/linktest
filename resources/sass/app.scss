@@ -6,7 +6,7 @@ body {
     font-size: 16px;
     color: $darkgrey;
     background-color: $white;
-
+}   
     h1,h2,h3,h4,h5,h6 {
         font-family: $mont-bold;
         color: $darkgrey;
@@ -62,12 +62,15 @@ body {
                 }
             }
 
-            .navbar-nav {
+     
             
                 .nav-item {
                     margin: 0 25px;
                     position: relative;
 
+                    &:last-child {
+                        margin-right: 40px;
+                    }
                     
                     .nav-link {
                         @extend %link-bold;
@@ -100,23 +103,9 @@ body {
                     }
                     
                 }
-            }
+           
             
            
-        }
-
-        #search {
-            form{
-
-                input {
-                    border-radius: 0 !important;
-                    padding: 15px 0 !important;
-                }
-
-                button {
-                    background-color: $red;
-                }
-            }
         }
         
 
@@ -196,11 +185,11 @@ body {
 
             .favorites {
                 margin-top: 15px;
-                a {
-                    background-color: $red;
-                    padding: 10px 15px;
-                    color: $white;
-                }
+                // a {
+                //     background-color: $red;
+                //     padding: 10px 15px;
+                //     color: $white;
+                // }
             }
 
             .headline {
@@ -227,13 +216,7 @@ body {
 
                 form {
                     button {
-                        border-radius: 0;
-                        border: 0;
-                        background-color: $red;
-                        color:$white;
-                        text-transform: uppercase;
                         margin-right: 5px;
-                        padding: 10px 15px;
                     }
 
                     .increase {
@@ -243,14 +226,6 @@ body {
                     .quan {
                         text-align: center;
                     }
-
-                    .add-cart {
-                        button {
-                            padding: 15px 20px;
-                            font-family: $mont-bold;
-                            font-size: 14px;
-                        }
-                    }
                 }
             }
 
@@ -258,54 +233,18 @@ body {
                 margin-bottom: 40px;
                 ul {
                     margin:0;
-                    li {
-                        border: 1px solid $grey;
-                            padding: 15px 20px;
-                        @media (max-width:$break-tablet) {
-                            margin-bottom: 12px;
-                        }
+                   
                         a {
-                            color:$grey;
-                            display: block;
-                            font-family: $mont-bold;
                             font-size: 12px;
-                            text-transform: uppercase;
+
+                            @media (max-width: $break-medium) {
+                                margin-bottom: 12px;
+                            }
                         }
-                    }
-                }
-            }
-
-            .descriptions {
-                margin-top: 60px;
-
-                .nav-tabs {
-                    border-bottom: 2px solid $red;
-                    li {
-                        a {
-                            background-color: $lightgrey;
-                            color:$grey;
-                            text-transform: uppercase;
-                            margin-right: 5px;
-                            padding: 15px 25px;
-                            font-family: $mont-bold;
-                            font-size: 14px;
-                            border-radius: 0;
-                            border:0;
-                            border-bottom: 1px solid $red;
-                        }
-
-                        .active {
-                            background-color: $red;
-                            color:$white;
-                        }
-                    }
-                }
-
-                .tab-content {
-                    padding: 40px 0;
                     
                 }
             }
+
            
         }
 
@@ -341,6 +280,93 @@ body {
         
     }
 
+    %btn {
+        padding: 15px 20px;
+        font-family: $mont-bold;
+        text-transform: uppercase;
+        padding: 12px 15px;
+        transition: 0.3s;
+    }
+    
+    .main-btn {
+        @extend %btn;
+        background-color: $red;
+        color:$white;
+        font-size: 14px;
+        border-radius: 0;
+        border: 0;
+        &:hover {
+            background-color: $grey;
+        }
+    }
+
+    .main-btn-outline {
+        @extend %btn;
+        color:$grey;
+        display: block;
+        font-family: $mont-bold;
+        border: 1px solid $grey;
+        padding: 15px 20px;
+        
+        &:hover {
+            background-color: $grey;
+            color: $darkgrey;
+        }
+
+    }
+
+    .product-tabs {
+        margin-top: 60px;
+
+        .nav-tabs {
+            border-bottom: 2px solid $red;
+            li {
+                a {
+                    background-color: $lightgrey;
+                    color:$grey;
+                    text-transform: uppercase;
+                    margin-right: 5px;
+                    padding: 15px 25px;
+                    font-family: $mont-bold;
+                    font-size: 14px;
+                    border-radius: 0;
+                    border:0;
+                    border-bottom: 1px solid $red;
+                }
+
+                .active {
+                    background-color: $red;
+                    color:$white;
+                    border-color: $red;
+                }
+            }
+        }
+
+        .tab-content {
+            padding: 40px 0;
+            
+        }
+    }
+
+    form {
+        .form-control {
+            border-radius: 0;
+            padding: 12px;
+            border: 1px solid $grey;
+     
+            font-family: $mont-bold;
+            font-size: 12px;
+            color:$grey;
+
+            &::placeholder{
+                text-transform: uppercase;
+                font-family: $mont-bold;
+                font-size: 12px;
+                color:$grey;
+            }
+        }
+    }
+
     .related-products {
         display: flex;
         flex-direction: row;
@@ -374,6 +400,60 @@ body {
                     position: absolute;
                     top: -7px;
                     right: 0;
+                    color:$white;
+                    padding: 4px 11px;
+                    
+
+                    p {
+                        font-family: $mont-bold;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        margin-bottom: 0;
+                        position: relative;
+                    }
+                }
+
+                %label-tag {
+                    width: 13px;
+                    height: 26px;
+                    content: '';
+                    left: -24px;
+                    bottom: -4px;
+                    position: absolute;
+                }
+
+                .sale {
+                    background-color: $red;
+                    p {
+                        
+                        &:before {
+                            background-image: url('/images/sale-point.png');
+                            @extend %label-tag;
+                        }
+                    }
+                    
+                }
+
+                .new {
+                    background-color: $green;
+                    p {
+                        
+                        &:before {
+                            background-image: url('/images/new-point.png');
+                            @extend %label-tag;
+                        }
+                    }
+                }
+
+                .out-stock{
+                    background-color: $grey2;
+                    p {
+                        
+                        &:before {
+                            background-image: url('/images/stock-point.png');
+                            @extend %label-tag;
+                        }
+                    }
                 }
 
                 .out-of-stock {
@@ -400,6 +480,7 @@ body {
                         font-size: 14px;
                         color: $darkgrey;
                         bottom: 0;
+                        text-decoration: line-through;
                     }
                 }
 
@@ -416,15 +497,9 @@ body {
                 li {
                     margin:0px;
                     a {
-                        background-color: $red;
-                        display: block;
-                        padding: 10px 20px;
-                        color:$white;
-                        transition: 0.3s;
-                        &:hover {
-
-                            background-color: $grey;
-                        }
+                        margin:0;
+                        
+                       
                     }
 
                     @media (max-width: $break-tablet) {
@@ -454,6 +529,7 @@ body {
             border:1px solid $grey;
             border-radius: 50%;
             transition: 0.3s;
+            position: relative;
             a {
                 display:block;
                 text-align: center;
@@ -467,6 +543,21 @@ body {
 
                 &:hover {
                     color: $darkgrey;
+                }
+
+                .badge {
+                    width: 17px;
+                    height: 17px;
+                    background-color:$red;
+                    color: $white;
+                    font-family: $open-sans;
+                    font-size: 11px;
+                    position: absolute;
+                    top: -5px;
+                    right: -4px;
+                    border-radius: 50%;
+                    text-align: center;
+                    padding: 2px;
                 }
             }
 
@@ -578,34 +669,10 @@ body {
 
             form {
                 input {
-                    border-radius: 0;
-                    padding: 12px;
-                    border: 1px solid $grey;
                     background-color: $black;
-
-                    font-family: $mont-bold;
-                    font-size: 12px;
-                    color:$grey;
-
-                    &::placeholder{
-                        text-transform: uppercase;
-                        font-family: $mont-bold;
-                        font-size: 12px;
-                        color:$grey;
-                    }
-                }
-
-                button {
-                    border-radius: 0;
-                    border-color: $red;
-                    background-color: $red;
-                    font-family: $mont-bold;
-                    font-size: 14px;
-                    color:$white;
-                    text-transform: uppercase;
-                    padding: 10px 25px;
                 }
             }
+           
 
             @media (max-width:$break-medium) {
                 
@@ -647,4 +714,3 @@ body {
         }
     }
 
-}   

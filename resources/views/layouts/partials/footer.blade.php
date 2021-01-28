@@ -68,7 +68,7 @@
                     <div class="mb-3">
                         <input type="email" class="form-control" placeholder="Email Address">
                     </div>
-                    <button type="submit" class="btn ">Join Now</button>
+                    <button type="submit" class="btn main-btn">Join Now</button>
                 </form>
             </div>
         </div>

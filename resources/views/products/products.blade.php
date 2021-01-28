@@ -50,12 +50,32 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h4>Sporta Predator Rx6</h4>
-                            <img src="/images/shares.png" alt="" class="shares">
+                            {{-- <img src="/images/shares.png" alt="" class="shares"> --}}
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <div id="fb-root"></div>
+                                    <script async defer crossorigin="anonymous"
+                                        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=412071742813551&autoLogAppEvents=1"
+                                        nonce="WsiEzJtd"></script>
+                                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"
+                                        data-width="" data-layout="button_count" data-action="like" data-size="small"
+                                        data-share="false"></div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <iframe
+                                        src="https://platform.twitter.com/widgets/follow_button.html?screen_name=TwitterDev&show_screen_name=false&show_count=true&size=s"
+                                        title="Follow TwitterDev on Twitter"
+                                        style="border: 0; overflow: hidden;"></iframe>
+                                </li>
+                            </ul>
+
+
+
                             <img src="/images/reviews.png" alt="">
                         </div>
                         <div class="col-md-3">
                             <div class="favorites">
-                                <p><a href="{{ url('/') }}"><i class="far fa-heart"></i></a></p>
+                                <p><a href="{{ url('/') }}" class="main-btn"><i class="far fa-heart"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -69,17 +89,17 @@
                         <p>Quantity</p>
                         <form>
                             <div class="input-group mb-3">
-                                <button class="btn btn-outline-secondary decrease" type="button"><i
+                                <button class="btn btn-outline-secondary decrease main-btn" type="button"><i
                                         class="fas fa-minus"></i></button>
 
                                 <input type="text" class="form-control quan" min="1" value="0">
 
-                                <button class="btn btn-outline-secondary btn2 increase" type="button"><i
+                                <button class="btn btn-outline-secondary btn2 increase main-btn" type="button"><i
                                         class="fas fa-plus"></i></button>
 
                                 <div class="add-cart">
 
-                                    <button type="submit">Add To Cart</button>
+                                    <button type="submit" class="main-btn">Add To Cart</button>
                                 </div>
                             </div>
                         </form>
@@ -87,14 +107,17 @@
                     <div class="tags headline">
                         <p>Tags</p>
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a href="{{ url('/') }}">Bike</a></li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}">Extreme</a></li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}">Mountain</a></li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}">MTB</a></li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}">Professional</a></li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Bike</a></li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Extreme</a>
+                            </li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Mountain</a>
+                            </li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">MTB</a></li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}"
+                                    class="main-btn-outline">Professional</a></li>
                         </ul>
                     </div>
-                    <div class="descriptions">
+                    <div class="descriptions product-tabs">
                         <ul class="nav nav-tabs" id="productTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="description-tab" data-bs-toggle="tab" href="#description"
