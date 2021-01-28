@@ -269,7 +269,7 @@
 
 
 
-    $(".my-rating").starRating({
+    $('.my-rating').starRating({
         starSize: 25,
         hoverColor: '#db4a4a',
         activeColor: '#db4a4a',
