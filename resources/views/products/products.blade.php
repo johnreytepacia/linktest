@@ -51,27 +51,32 @@
                         <div class="col-md-9">
                             <h4>Sporta Predator Rx6</h4>
                             {{-- <img src="/images/shares.png" alt="" class="shares"> --}}
-                            <ul class="list-inline">
+                            <ul class="list-inline shares">
                                 <li class="list-inline-item">
-                                    <div id="fb-root"></div>
-                                    <script async defer crossorigin="anonymous"
-                                        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=412071742813551&autoLogAppEvents=1"
-                                        nonce="WsiEzJtd"></script>
-                                    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"
-                                        data-width="" data-layout="button_count" data-action="like" data-size="small"
-                                        data-share="false"></div>
+                                    <iframe src="{{ url('/fb') }}" style="border:none;overflow:hidden;width:98px;"
+                                        scrolling="no">
+                                    </iframe>
                                 </li>
                                 <li class="list-inline-item">
-                                    <iframe
-                                        src="https://platform.twitter.com/widgets/follow_button.html?screen_name=TwitterDev&show_screen_name=false&show_count=true&size=s"
-                                        title="Follow TwitterDev on Twitter"
-                                        style="border: 0; overflow: hidden;"></iframe>
+                                    <iframe src="{{ url('/twitter') }}" style="border:none;overflow:hidden;width:161px;"
+                                        scrolling="no">
+                                    </iframe>
+                                </li>
+                                <li class="list-inline-item">
+                                    <iframe src="{{ url('/pin') }}" style="border:none;overflow:hidden;width:81px;"
+                                        scrolling="no">
+                                    </iframe>
                                 </li>
                             </ul>
 
 
 
-                            <img src="/images/reviews.png" alt="">
+                            {{-- <img src="/images/reviews.png" alt=""> --}}
+
+                            <div class="reviews">
+                                <div class="my-rating"></div>
+                                <div class="result"></div>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="favorites">
@@ -80,7 +85,7 @@
                         </div>
                     </div>
 
-                    <h2>&dollar; 2000</h2>
+                    <h2>&dollar; 2999</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
                         scelerisque sed, lacinia in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
                         augue suscipit.</p>
@@ -177,6 +182,42 @@
     .flex-direction-nav a:before {
         font-size: 24px;
     }
+
+    .jq-stars {
+        display: inline-block;
+    }
+
+    .jq-rating-label {
+        font-size: 22px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .jq-star {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .jq-star-svg {
+        padding-left: 3px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .jq-star-svg path {
+        /* stroke: #000; */
+        stroke-linejoin: round;
+    }
+
+    /* un-used */
+    .jq-shadow {
+        -webkit-filter: drop-shadow(-2px -2px 2px #888);
+        filter: drop-shadow(-2px -2px 2px #888);
+    }
 </style>
 
 @endsection
@@ -184,6 +225,7 @@
 @section('custom_js')
 
 <script src="/js/plugins/jquery.flexslider-min.js"></script>
+<script src="/js/plugins/jquery.star-rating-svg.js"></script>
 
 <script type="text/javascript">
     $('#carousel').flexslider({
@@ -223,6 +265,19 @@
         value--;
         $('.quan').val(value);
 
+    });
+
+
+
+    $(".my-rating").starRating({
+        starSize: 25,
+        hoverColor: '#db4a4a',
+        activeColor: '#db4a4a',
+        ratedColor: '#db4a4a',
+        strokeColor: '#a4a4a4',
+        callback: function(currentRating, $el){
+           $('.reviews .result').append('<p>' + currentRating + ' reviews</p>');
+        }
     });
 
         
