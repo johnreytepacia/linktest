@@ -75,7 +75,7 @@
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search" aria-label="Search"
                 aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary main-btn" type="button" id="button-addon2"><i
+            <button class="btn btn-outline-secondary main-btn btn" type="button" id="button-addon2"><i
                     class="fas fa-search"></i></button>
         </div>
     </form>

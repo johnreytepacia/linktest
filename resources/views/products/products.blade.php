@@ -8,19 +8,19 @@
                 <div id="slider" class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
 
                     </ul>
@@ -28,19 +28,19 @@
                 <div id="carousel" class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                         <li>
-                            <img src="/images/bike.png" />
+                            <img src="/images/bike.png" alt="Santa Cruz Bike" />
                         </li>
                     </ul>
                 </div>
@@ -53,18 +53,15 @@
                             {{-- <img src="/images/shares.png" alt="" class="shares"> --}}
                             <ul class="list-inline shares">
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/fb') }}" style="border:none;overflow:hidden;width:98px;"
-                                        scrolling="no">
+                                    <iframe src="{{ url('/fb') }}" style="width:98px;" scrolling="no">
                                     </iframe>
                                 </li>
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/twitter') }}" style="border:none;overflow:hidden;width:161px;"
-                                        scrolling="no">
+                                    <iframe src="{{ url('/twitter') }}" style="width:161px;" scrolling="no">
                                     </iframe>
                                 </li>
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/pin') }}" style="border:none;overflow:hidden;width:81px;"
-                                        scrolling="no">
+                                    <iframe src="{{ url('/pin') }}" style="width:81px;" scrolling="no">
                                     </iframe>
                                 </li>
                             </ul>
@@ -74,13 +71,15 @@
                             {{-- <img src="/images/reviews.png" alt=""> --}}
 
                             <div class="reviews">
-                                <div class="my-rating"></div>
-                                <div class="result"></div>
+                                <div class="my-rating" data-rating="5.0"></div>
+                                <div class="result">
+                                    <p>5 REVIEWS</p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="favorites">
-                                <p><a href="{{ url('/') }}" class="main-btn"><i class="far fa-heart"></i></a></p>
+                                <p><a href="{{ url('/') }}" class="main-btn btn"><i class="far fa-heart"></i></a></p>
                             </div>
                         </div>
                     </div>
@@ -94,17 +93,17 @@
                         <p>Quantity</p>
                         <form>
                             <div class="input-group mb-3">
-                                <button class="btn btn-outline-secondary decrease main-btn" type="button"><i
+                                <button class="btn btn-outline-secondary decrease main-btn btn" type="button"><i
                                         class="fas fa-minus"></i></button>
 
                                 <input type="text" class="form-control quan" min="1" value="0">
 
-                                <button class="btn btn-outline-secondary btn2 increase main-btn" type="button"><i
+                                <button class="btn btn-outline-secondary btn2 increase main-btn btn" type="button"><i
                                         class="fas fa-plus"></i></button>
 
                                 <div class="add-cart">
 
-                                    <button type="submit" class="main-btn">Add To Cart</button>
+                                    <button type="submit" class="main-btn btn">Add To Cart</button>
                                 </div>
                             </div>
                         </form>
@@ -112,14 +111,18 @@
                     <div class="tags headline">
                         <p>Tags</p>
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Bike</a></li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Extreme</a>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline btn">Bike</a>
                             </li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">Mountain</a>
-                            </li>
-                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline">MTB</a></li>
                             <li class="list-inline-item"><a href="{{ url('/') }}"
-                                    class="main-btn-outline">Professional</a></li>
+                                    class="main-btn-outline btn">Extreme</a>
+                            </li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}"
+                                    class="main-btn-outline btn">Mountain</a>
+                            </li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}" class="main-btn-outline btn">MTB</a>
+                            </li>
+                            <li class="list-inline-item"><a href="{{ url('/') }}"
+                                    class="main-btn-outline btn">Professional</a></li>
                         </ul>
                     </div>
                     <div class="descriptions product-tabs">
@@ -233,8 +236,8 @@
             controlNav: false,
             animationLoop: false,
             slideshow: false,
-            itemWidth: 137,
-            itemMargin: 20,
+            itemWidth: 149,
+            itemMargin: 10,
             asNavFor: '#slider'
         });
     
@@ -271,15 +274,17 @@
 
     $('.my-rating').starRating({
         starSize: 25,
-        hoverColor: '#db4a4a',
         activeColor: '#db4a4a',
         ratedColor: '#db4a4a',
         strokeColor: '#a4a4a4',
+        useGradient: false,
         callback: function(currentRating, $el){
            $('.reviews .result').append('<p>' + currentRating + ' reviews</p>');
         }
     });
 
+    $('.my-rating').starRating('setReadOnly', true);
+    
         
    
 </script>
