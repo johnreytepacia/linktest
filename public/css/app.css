@@ -173,6 +173,7 @@ header .divider {
   margin: 0;
 }
 .product-wrapper .product-content .shares li iframe {
+  overflow: hidden;
   height: 28px;
 }
 .product-wrapper .product-content .shares li .fb {
