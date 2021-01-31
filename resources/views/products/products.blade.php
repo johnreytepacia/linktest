@@ -231,9 +231,6 @@
 <script src="/js/plugins/jquery.star-rating-svg.js"></script>
 
 <script>
-    var share_iframe = $('.shares iframe');
-    share_iframe.attr('scrolling','no');
-
     $('#carousel').flexslider({
             animation: "slide",
             controlNav: false,
@@ -288,6 +285,8 @@
 
     $('.my-rating').starRating('setReadOnly', true);
     
+    var share_iframe = $('.shares iframe');
+    share_iframe.attr('scrolling','no');
         
    
 </script>
