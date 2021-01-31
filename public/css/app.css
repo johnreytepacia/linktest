@@ -175,6 +175,15 @@ header .divider {
 .product-wrapper .product-content .shares li iframe {
   height: 28px;
 }
+.product-wrapper .product-content .shares li .fb {
+  width: 98px;
+}
+.product-wrapper .product-content .shares li .tw {
+  width: 161px;
+}
+.product-wrapper .product-content .shares li .pin {
+  width: 81px;
+}
 .product-wrapper .product-content .reviews .result {
   margin-top: 10px;
   padding-left: 8px;

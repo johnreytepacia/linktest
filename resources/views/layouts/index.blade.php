@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -50,7 +50,7 @@
 
     <script src="/js/app.js"></script>
 
-    <script type="text/javascript">
+    <script>
         $('.preloader').fadeOut('slow');
     </script>
     @yield('custom_js')

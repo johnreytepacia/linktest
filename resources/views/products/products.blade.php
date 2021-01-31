@@ -53,15 +53,15 @@
                             {{-- <img src="/images/shares.png" alt="" class="shares"> --}}
                             <ul class="list-inline shares">
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/fb') }}" style="width:98px;" scrolling="no">
+                                    <iframe src="{{ url('/fb') }}" class="fb">
                                     </iframe>
                                 </li>
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/twitter') }}" style="width:161px;" scrolling="no">
+                                    <iframe src="{{ url('/twitter') }}" class="tw">
                                     </iframe>
                                 </li>
                                 <li class="list-inline-item">
-                                    <iframe src="{{ url('/pin') }}" style="width:81px;" scrolling="no">
+                                    <iframe src="{{ url('/pin') }}" class="pin">
                                     </iframe>
                                 </li>
                             </ul>
@@ -96,7 +96,7 @@
                                 <button class="btn btn-outline-secondary decrease main-btn btn" type="button"><i
                                         class="fas fa-minus"></i></button>
 
-                                <input type="text" class="form-control quan" min="1" value="0">
+                                <input type="text" class="form-control quan" value="0">
 
                                 <button class="btn btn-outline-secondary btn2 increase main-btn btn" type="button"><i
                                         class="fas fa-plus"></i></button>
@@ -230,7 +230,10 @@
 <script src="/js/plugins/jquery.flexslider-min.js"></script>
 <script src="/js/plugins/jquery.star-rating-svg.js"></script>
 
-<script type="text/javascript">
+<script>
+    var share_iframe = $('.shares iframe');
+    share_iframe.attr('scrolling','no');
+
     $('#carousel').flexslider({
             animation: "slide",
             controlNav: false,
